@@ -1,0 +1,51 @@
+body{
+    overflow: hidden;
+    background-image: linear-gradient( 109.6deg,  rgba(121,203,202,1) 11.2%, rgba(119,161,211,1) 91.1% );
+    color: white;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 240px;
+}
+.border{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform:translate(-50%, -40%);  
+}
+.title, .anime-title {
+    text-align: center;
+}
+p {
+    padding: 0% 10%;
+    text-justify: auto;
+}
+.character{
+    text-align: right;
+    padding: 0 10px;
+}
+
+.anim {
+   animation-name: anim;
+    animation-duration: 6s;
+    animation-direction: forwards;
+}
+@keyframes anim {
+    0%{
+        left: 50%;
+    }
+    50%{
+       left: 130%;
+       opacity: 0;  
+    }
+    51%{
+       left: -5%;
+       opacity: 0;  
+    }
+    100%{
+       left: 50%;    
+       opacity: 1; 
+    }
+}
