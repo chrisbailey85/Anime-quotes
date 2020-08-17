@@ -10,7 +10,7 @@ const getQuote = function () {
                 getQuote();
             } else {
                 document.querySelector(".anime-title").innerText = quote.anime;
-                document.querySelector(".qoute").innerText = '"' + quote.quote + '"';
+                // document.querySelector(".qoute").innerText = '"' + quote.quote + '"';
                 document.querySelector("h3").innerText = "-" + quote.character;
             }
             const tweet = quote.anime + " " + '"' + quote.quote + '" ' + quote.character

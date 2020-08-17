@@ -19,7 +19,7 @@ body{
 } 
 .box{
     width: 600px;
-    height: 240px;
+    height: 280px;
 }
 .border{
     position: relative;
@@ -64,9 +64,12 @@ body{
     font-family: 'Cinzel Decorative', cursive;
     font-weight: 400;
 }
-.twitter-share-button-container:hover{
-    transform: translateY(-5px);
+.twitter-share-button-container{
+    margin: 20px ;
 }
+/* .twitter-share-button-container:hover{
+    transform: translateY(5px);
+} */
 span{
     text-align: left;
 }
@@ -104,4 +107,31 @@ footer{
        left: 0%;    
        opacity: 1; 
     }
+}
+
+@media (max-width: 626px){
+    body{
+        background-image: linear-gradient( 109.6deg,  rgb(69, 124, 123) 11.2%, rgb(66, 87, 112) 91.1% );
+
+    }
+    .box{
+        width: 550px;
+        height: 300px;
+    }
+    .border{
+        margin: 50px auto; 
+    } 
+}
+@media (max-width: 590px){
+    body{
+        background-image: linear-gradient( 109.6deg,  rgb(69, 124, 123) 11.2%, rgb(66, 87, 112) 91.1% );
+
+    }
+    .box{
+        width: 450px;
+        height: 320px;
+    }
+    .border{
+        margin: 50px auto; 
+    } 
 }
