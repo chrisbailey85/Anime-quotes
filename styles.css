@@ -25,17 +25,23 @@ body{
     position: relative;
     margin: 100px auto; 
 } 
-.title{
+.title, .anime-title{
     text-align: center;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 700;
+}
+.title{
     margin-top: 30px;
 }
 .anime-title{
-    text-align: center;
     padding: 10px 0 ;
+    font-size: 1.5rem ;
 }
 .qoute {
     margin: 30px 0;
     padding: 0% 10%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500 ;
 }
 .auther-info-container{
     display: flex;
@@ -45,6 +51,8 @@ body{
 }
 .character{
     margin-right: 10px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 400;
 }
 .twitter-share-button{
     background: transparent;
@@ -53,15 +61,18 @@ body{
     font-weight: bold;
     margin-left: 10px;
     padding: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500 ;
 }
 .twitter-share-button-container:hover{
-    transform: translateY(5px);
+    transform: translateY(-5px);
 }
 span{
     text-align: left;
 }
 .button {
     margin: auto;
+   
 }
 footer{
     position: absolute;
@@ -69,6 +80,8 @@ footer{
     width: 100%;
     text-align: center;
     margin-bottom: 1rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500 ;
 }
 .anim {
    animation-name: anim;
@@ -87,9 +100,6 @@ footer{
        left: -60%;
        opacity: 0;  
     }
-    /* 70% {
-        left: -80%;
-    } */
     100%{
        left: 0%;    
        opacity: 1; 
