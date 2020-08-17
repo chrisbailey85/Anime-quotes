@@ -1,13 +1,15 @@
-import { annotate } from 'https://unpkg.com/rough-notation?module';
-const e = document.querySelector(".box");
-const annotation = annotate(e, { type: 'box' });
-annotation.color = "white";
-annotation.show();
-box.addEventListener("click", ()=> {
+import { annotate, annotationGroup } from 'https://unpkg.com/rough-notation?module';
+const border = annotate(document.querySelector(".box"), { type: 'box' } );
+const getNewQuote = document.querySelector("button");
+const twitter = annotate(document.querySelector(".twitter-share-button"), { type: 'circle' } )
+border.color = "white";
+const ag = annotationGroup([border, twitter]);
+ag.show()
+getNewQuote.addEventListener("click", ()=> {
   setTimeout(() => {
-      annotation.hide();
+      ag.hide();
   }, 3000);  
   setTimeout(() => {
-      annotation.show();
-  }, 9000);  
+      ag.show();
+  }, 6000);  
 })

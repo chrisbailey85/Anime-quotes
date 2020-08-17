@@ -4,18 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
+    />
     <title>Anime Quote</title>
   </head>
   <body>
-    <h1 class="title">Anime Quote's</h1>
-    <div class="border">
-      <div class="box">
-        <h1 class="anime-title"></h1>
-        <p class="qoute">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pharetra massa consequat blandit dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur fringilla erat eget neque semper, quis gravida odio jkjk</p>
-        <h3 class="character"></h3>
+    <div class="container">
+      <h1 class="title">Anime Quote's</h1>
+      <div class="border">
+        <div class="box">
+          <h1 class="anime-title"></h1>
+          <p class="qoute"></p>
+          <div class="auther-info-container">
+            <div class="twitter-share-button-container">
+              <a
+                class="twitter-share-button"
+                href="https://twitter.com/intent/tweet"
+              >
+                Tweet</a
+              >
+            </div>
+            <h3 class="character"></h3>
+          </div>
+        </div>
+      </div>
+      <div class="button">
+        <button>Get New Quote</button>
       </div>
     </div>
-    <script src="./index.js"></script>
+    <footer><p>Made by Chris Bailey</p></footer>
+    <script src="./get-quote.js"></script>
     <script type="module" src="./border.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"
+      data-cfasync="false"
+    ></script>
+    <script>
+      window.cookieconsent.initialise({
+        palette: {
+          popup: {
+            background: "#1d8a8a",
+          },
+          button: {
+            background: "#62ffaa",
+          },
+        },
+        theme: "classic",
+        position: "bottom-left",
+      });
+    </script>
   </body>
 </html>

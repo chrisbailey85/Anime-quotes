@@ -9,17 +9,17 @@ const getQuote = function(){
             console.log("too long")
             getQuote();
         } else {
-        document.querySelector(".anime-title").innerText = quote.anime
-        // document.querySelector("p").innerText = quote.quote
-        document.querySelector("h3").innerText = quote.character
+        document.querySelector(".anime-title").innerText = quote.anime;
+        document.querySelector(".qoute").innerText = '"' + quote.quote + '"';
+        document.querySelector("h3").innerText = "- " + quote.character;
         }
     })
 }
 
 getQuote();
-
-let box = document.querySelector(".border");
-box.addEventListener("click", ()=> {
+const box = document.querySelector(".border")
+const getNewQuote = document.querySelector("button");
+getNewQuote.addEventListener("click", ()=> {
     box.classList.add("anim")
     setTimeout(function(){
         getQuote();

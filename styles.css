@@ -1,32 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+    width: 100%;
+}
 body{
     overflow: hidden;
     background-image: linear-gradient( 109.6deg,  rgba(121,203,202,1) 11.2%, rgba(119,161,211,1) 91.1% );
     color: white;
+    text-shadow: black 1px 1px 5px;
 }
-.box{
+ .container{
     display: flex;
     flex-direction: column;
+    justify-items: center;
+} 
+.box{
     width: 600px;
-    height: 240px;
+    height: 230px;
 }
 .border{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform:translate(-50%, -40%);  
-}
-.title, .anime-title {
+    position: relative;
+    margin: 100px auto; 
+} 
+.title{
     text-align: center;
+    margin-top: 30px;
 }
-p {
+.anime-title{
+    text-align: center;
+    padding: 10px 0 ;
+}
+.qoute {
+    margin: 30px 0;
     padding: 0% 10%;
-    text-justify: auto;
+}
+.auther-info-container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 20px;
 }
 .character{
-    text-align: right;
-    padding: 0 10px;
+    margin-right: 10px;
 }
-
+.twitter-share-button{
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 5px;
+}
+.twitter-share-button-container:hover{
+    transform: translateY(5px);
+}
+span{
+    text-align: left;
+}
+.button {
+    margin: auto;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
 .anim {
    animation-name: anim;
     animation-duration: 6s;
@@ -34,18 +77,21 @@ p {
 }
 @keyframes anim {
     0%{
-        left: 50%;
+        left: 20%;
     }
     50%{
-       left: 130%;
+        left: 40%;
        opacity: 0;  
     }
     51%{
-       left: -5%;
+       left: -60%;
        opacity: 0;  
     }
+    /* 70% {
+        left: -80%;
+    } */
     100%{
-       left: 50%;    
+       left: 0%;    
        opacity: 1; 
     }
 }
