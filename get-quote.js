@@ -10,7 +10,7 @@ const getQuote = function () {
                 getQuote();
             } else {
                 document.querySelector(".anime-title").innerText = quote.anime;
-                // document.querySelector(".qoute").innerText = '"' + quote.quote + '"';
+                document.querySelector(".qoute").innerText = '"' + quote.quote + '"';
                 document.querySelector("h3").innerText = "-" + quote.character;
             }
             const tweet = quote.anime + " " + '"' + quote.quote + '" ' + quote.character
@@ -24,10 +24,13 @@ const getQuote = function () {
 
 getQuote();
 const box = document.querySelector(".border")
-const getNewQuote = document.querySelector("button");
+const getNewQuote = document.querySelector(".button");
 getNewQuote.addEventListener("click", () => {
     box.classList.add("anim")
     setTimeout(function () {
         getQuote();
     }, 3000);
+    setTimeout(function () {
+        box.classList.remove("anim")
+    }, 6001);
 })
