@@ -1,9 +1,9 @@
-const url = "https://anime-chan.herokuapp.com/api/quotes/random"
+const url = "https://animechanapi.xyz/api/quotes/random"
 const getQuote = function () {
     fetch(url)
         .then(res => res.json())
         .then(res => {
-            let quote = { ...res[0] }
+            let quote = { ...res.data[0] }
             let characters = quote.anime + quote.quote + quote.character;
             if (characters.length > 267) {
                 console.log("too long")
@@ -16,7 +16,6 @@ const getQuote = function () {
             const tweet = quote.anime + " " + '"' + quote.quote + '" ' + quote.character
             document.querySelector(".twitter-share-button").setAttribute("href", "https://twitter.com/intent/tweet?hashtags=animequotes&text=" + encodeURIComponent(tweet))
         })
-
 }
 
 
